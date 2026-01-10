@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/rlittlefield/ryansend/issues</Support>
   <Project>https://github.com/rlittlefield/ryansend</Project>
-  <Overview>ryansend lets you share files on your computer via public URLs with cryptographic tokens that automatically expire. Perfect for sharing large files directly from your home server without needing special software, accounts, or VPNs.&#xD;
+  <Overview>ryansend lets you share files on your computer via public download URLs with cryptographic tokens that automatically expire. Perfect for sharing large files directly from your home server without needing special software, accounts, or VPNs.&#xD;
 &#xD;
 Features:&#xD;
 • Share large files (tested with over 70GB)&#xD;
