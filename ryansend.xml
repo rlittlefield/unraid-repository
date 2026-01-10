@@ -22,7 +22,7 @@ Features:&#xD;
 &#xD;
 The admin panel (if enabled) will be available at http://[IP]:[PORT:3001]/admin/login with a randomly generated password shown in the container logs.</Overview>
   <Category>Network:Other Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/rlittlefield/ryansend/main/unraid/ryansend.xml</TemplateURL>
 
   <ExtraParams/>
