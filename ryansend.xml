@@ -10,7 +10,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/rlittlefield/ryansend/issues</Support>
+  <Support>https://forums.unraid.net/topic/196593-support-kingemer-ryansend/</Support>
   <Project>https://github.com/rlittlefield/ryansend</Project>
   <GitHub>https://github.com/rlittlefield/ryansend</GitHub>
   <Readme>https://github.com/rlittlefield/ryansend#readme</Readme>
