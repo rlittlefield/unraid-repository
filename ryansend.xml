@@ -31,7 +31,6 @@ The admin panel (if enabled) will be available at /admin/login with a randomly g
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1641945600</DateInstalled>
   <DonateText>Support ryansend development</DonateText>
   <DonateLink>https://ko-fi.com/ryanlittlefield</DonateLink>
   <Requires/>
