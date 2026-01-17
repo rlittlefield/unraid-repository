@@ -2,7 +2,8 @@
 <Container version="2">
   <Name>ryansend</Name>
   <Repository>ryanlittlefield/ryansend</Repository>
-  <Beta>True</Beta>
+  <Category>Network:Web Tools:</Category>
+  <Date>2026-01-17</Date>
   <Registry>https://hub.docker.com/r/ryanlittlefield/ryansend</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -24,7 +25,6 @@ Features:&#xD;
 • No external tracking or requests (except optional ko-fi link)&#xD;
 &#xD;
 The admin panel (if enabled) will be available at /admin/login with a randomly generated password shown in the container logs.</Overview>
-  <Category>Network:Other Productivity:</Category>
   <WebUI>http://[IP]:[PORT:3001]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/rlittlefield/ryansend/main/unraid/ryansend.xml</TemplateURL>
 
