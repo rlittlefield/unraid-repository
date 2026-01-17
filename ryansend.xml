@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ryansend</Name>
-  <Repository>ryanlittlefield/ryansend:latest</Repository>
+  <Repository>ryanlittlefield/ryansend</Repository>
+  <Beta>True</Beta>
   <Registry>https://hub.docker.com/r/ryanlittlefield/ryansend</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -9,6 +10,8 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/rlittlefield/ryansend/issues</Support>
   <Project>https://github.com/rlittlefield/ryansend</Project>
+  <GitHub>https://github.com/rlittlefield/ryansend</GitHub>
+  <Readme>https://github.com/rlittlefield/ryansend#readme</Readme>
   <Overview>ryansend lets you share files on your computer via public download URLs with cryptographic tokens that automatically expire. Perfect for sharing large files directly from your home server without needing special software, accounts, or VPNs.&#xD;
 &#xD;
 Features:&#xD;
@@ -20,7 +23,7 @@ Features:&#xD;
 • Works without JavaScript for fast page loads&#xD;
 • No external tracking or requests (except optional ko-fi link)&#xD;
 &#xD;
-The admin panel (if enabled) will be available at http://[IP]:[PORT:3001]/admin/login with a randomly generated password shown in the container logs.</Overview>
+The admin panel (if enabled) will be available at /admin/login with a randomly generated password shown in the container logs.</Overview>
   <Category>Network:Other Productivity:</Category>
   <WebUI>http://[IP]:[PORT:3001]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/rlittlefield/ryansend/main/unraid/ryansend.xml</TemplateURL>
