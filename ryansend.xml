@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <Container version="2">
   <Name>ryansend</Name>
   <Repository>ryanlittlefield/ryansend</Repository>
@@ -7,14 +7,16 @@
   <Date>2026-01-17</Date>
   <Registry>https://hub.docker.com/r/ryanlittlefield/ryansend</Registry>
   <Network>bridge</Network>
-  <MyIP/>
+  <MyIP />
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/196593-support-kingemer-ryansend/</Support>
+  <Support
+    >https://forums.unraid.net/topic/196593-support-kingemer-ryansend/</Support>
   <Project>https://github.com/rlittlefield/ryansend</Project>
   <GitHub>https://github.com/rlittlefield/ryansend</GitHub>
   <Readme>https://github.com/rlittlefield/ryansend#readme</Readme>
-  <Overview>ryansend lets you share files on your computer via public download URLs with cryptographic tokens that automatically expire. Perfect for sharing large files directly from your home server without needing special software, accounts, or VPNs.&#xD;
+  <Overview
+    >ryansend lets you share files on your computer via public download URLs with cryptographic tokens that automatically expire. Perfect for sharing large files directly from your home server without needing special software, accounts, or VPNs.&#xD;
 &#xD;
 Features:&#xD;
 • Share large files (tested with over 70GB)&#xD;
@@ -27,23 +29,134 @@ Features:&#xD;
 &#xD;
 The admin panel (if enabled) will be available at /admin/login with a randomly generated password shown in the container logs.</Overview>
   <WebUI>http://[IP]:[PORT:3001]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/rlittlefield/ryansend/main/unraid/ryansend.xml</TemplateURL>
+  <TemplateURL
+    >https://raw.githubusercontent.com/rlittlefield/ryansend/main/unraid/ryansend.xml</TemplateURL>
 
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
+  <ExtraParams />
+  <PostArgs />
+  <CPUset />
   <DonateText>Support ryansend development</DonateText>
   <DonateLink>https://ko-fi.com/ryanlittlefield</DonateLink>
-  <Requires/>
-  <Config Name="Main Port" Target="3000" Default="3000" Mode="tcp" Description="Main ryansend port for file sharing URLs" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
-  <Config Name="Admin Panel Port" Target="3001" Default="3001" Mode="tcp" Description="Admin panel port (only needed if admin panel is enabled)" Type="Port" Display="always" Required="false" Mask="false">3001</Config>
-  <Config Name="AppData" Target="/data" Default="/mnt/user/appdata/ryansend" Mode="rw" Description="Container config directory where config.yaml is stored" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ryansend</Config>
-  <Config Name="Shared Files" Target="/shared" Default="/mnt/user/" Mode="ro" Description="Directory containing files you want to share (mounted read-only for security)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
-  <Config Name="Base URL" Target="RYANSEND_BASE_URL" Default="http://tower.local:3000" Mode="" Description="Base URL for generated sharing links. Change 'tower.local' to your server's IP or domain name. Include the port if not using 80/443." Type="Variable" Display="always" Required="true" Mask="false">http://tower.local:3000</Config>
-  <Config Name="Enable Admin Panel" Target="RYANSEND_DEFAULT_ADMIN_PANEL" Default="true" Mode="" Description="Enable the web admin interface for browsing and sharing files" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Admin Sharing Root" Target="RYANSEND_ADMIN_SHARING_ROOT" Default="/shared" Mode="" Description="Root directory that the admin panel can browse and share from" Type="Variable" Display="always" Required="false" Mask="false">/shared</Config>
-  <Config Name="Remove Ko-fi Link" Target="RYANSEND_REMOVE_KOFI" Default="false" Mode="" Description="Set to 'true' to remove the ko-fi support link from the admin panel" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-  <Config Name="Log Level" Target="RUST_LOG" Default="info" Mode="" Description="Logging level (error, warn, info, debug, trace)" Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID that the container will run as" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID that the container will run as" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Requires />
+  <Config
+        Name="Main Port"
+        Target="3000"
+        Default="3000"
+        Mode="tcp"
+        Description="Main ryansend port for file sharing URLs"
+        Type="Port"
+        Display="always"
+        Required="true"
+        Mask="false"
+    >3000</Config>
+  <Config
+        Name="Admin Panel Port"
+        Target="3001"
+        Default="3001"
+        Mode="tcp"
+        Description="Admin panel port (only needed if admin panel is enabled)"
+        Type="Port"
+        Display="always"
+        Required="false"
+        Mask="false"
+    >3001</Config>
+  <Config
+        Name="AppData"
+        Target="/data"
+        Default=""
+        Mode="rw"
+        Description="Container config directory where config.yaml is stored. Such as /mnt/user/appdata/ryansend"
+        Type="Path"
+        Display="always"
+        Required="true"
+        Mask="false"
+    >/mnt/user/appdata/ryansend</Config>
+  <Config
+        Name="Shared Files"
+        Target="/shared"
+        Default=""
+        Mode="ro"
+        Description="Directory containing files you want to share (mounted read-only for security). Example: /mnt/user/ or /mnt/user/data/media"
+        Type="Path"
+        Display="always"
+        Required="true"
+        Mask="false"
+    >/mnt/user/</Config>
+  <Config
+        Name="Base URL"
+        Target="RYANSEND_BASE_URL"
+        Default="http://tower.local:3000"
+        Mode=""
+        Description="Base URL for generated sharing links. Change 'tower.local' to your server's IP or domain name. Include the port if not using 80/443."
+        Type="Variable"
+        Display="always"
+        Required="true"
+        Mask="false"
+    >http://tower.local:3000</Config>
+  <Config
+        Name="Enable Admin Panel"
+        Target="RYANSEND_DEFAULT_ADMIN_PANEL"
+        Default="true"
+        Mode=""
+        Description="Enable the web admin interface for browsing and sharing files"
+        Type="Variable"
+        Display="always"
+        Required="false"
+        Mask="false"
+    >true</Config>
+  <Config
+        Name="Admin Sharing Root"
+        Target="RYANSEND_ADMIN_SHARING_ROOT"
+        Default="/shared"
+        Mode=""
+        Description="Root directory that the admin panel can browse and share from"
+        Type="Variable"
+        Display="always"
+        Required="false"
+        Mask="false"
+    >/shared</Config>
+  <Config
+        Name="Remove Ko-fi Link"
+        Target="RYANSEND_REMOVE_KOFI"
+        Default="false"
+        Mode=""
+        Description="Set to 'true' to remove the ko-fi support link from the admin panel"
+        Type="Variable"
+        Display="advanced"
+        Required="false"
+        Mask="false"
+    >false</Config>
+  <Config
+        Name="Log Level"
+        Target="RUST_LOG"
+        Default="info"
+        Mode=""
+        Description="Logging level (error, warn, info, debug, trace)"
+        Type="Variable"
+        Display="advanced"
+        Required="false"
+        Mask="false"
+    >info</Config>
+  <Config
+        Name="PUID"
+        Target="PUID"
+        Default="99"
+        Mode=""
+        Description="User ID that the container will run as"
+        Type="Variable"
+        Display="advanced"
+        Required="false"
+        Mask="false"
+    >99</Config>
+  <Config
+        Name="PGID"
+        Target="PGID"
+        Default="100"
+        Mode=""
+        Description="Group ID that the container will run as"
+        Type="Variable"
+        Display="advanced"
+        Required="false"
+        Mask="false"
+    >100</Config>
 </Container>
