@@ -70,7 +70,7 @@ The admin panel (if enabled) will be available at /admin/login with a randomly g
         Display="always"
         Required="true"
         Mask="false"
-    >/mnt/user/appdata/ryansend</Config>
+    />
   <Config
         Name="Shared Files"
         Target="/shared"
@@ -81,7 +81,7 @@ The admin panel (if enabled) will be available at /admin/login with a randomly g
         Display="always"
         Required="true"
         Mask="false"
-    >/mnt/user/</Config>
+    />
   <Config
         Name="Base URL"
         Target="RYANSEND_BASE_URL"
@@ -92,7 +92,7 @@ The admin panel (if enabled) will be available at /admin/login with a randomly g
         Display="always"
         Required="true"
         Mask="false"
-    >http://tower.local:3000</Config>
+    >http://localhost:3000</Config>
   <Config
         Name="Enable Admin Panel"
         Target="RYANSEND_DEFAULT_ADMIN_PANEL"
