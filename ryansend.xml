@@ -4,7 +4,6 @@
   <Repository>ryanlittlefield/ryansend</Repository>
   <Registry>https://hub.docker.com/r/ryanlittlefield/ryansend</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/196593-support-kingemer-ryansend/</Support>
@@ -24,15 +23,7 @@ Features:&#13;
 The admin panel (if enabled) will be available at /admin/login with a randomly generated password shown in the container logs.</Overview>
   <Category>Tools: Network:Web Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:3001]/</WebUI>
-  <TemplateURL/>
-  <Icon/>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1768973856</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
+  <DonateLink>https://ko-fi.com/ryanlittlefield</DonateLink>
   <Config Name="Main Port (sharing files)" Target="3000" Default="" Mode="tcp" Description="Main ryansend port for file sharing URLs. If you change this from the default of 3000, you should change RYANSEND_PORT too." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
   <Config Name="Admin Panel Port" Target="3001" Default="3001" Mode="tcp" Description="ryansend runs the admin panel on a different port from the path that shares files." Type="Port" Display="always" Required="false" Mask="false">3001</Config>
   <Config Name="AppData" Target="/data" Default="" Mode="rw" Description="Where ryansend will write its config. The config files are small so this location doesn't need much storage capacity. ryansend never copies the shared files to this location. Example: /mnt/user/ryansend" Type="Path" Display="always" Required="true" Mask="false"/>
