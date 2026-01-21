@@ -3,6 +3,7 @@
   <Name>ryansend</Name>
   <Repository>ryanlittlefield/ryansend</Repository>
   <Registry>https://hub.docker.com/r/ryanlittlefield/ryansend</Registry>
+  <TemplateURL>https://raw.githubusercontent.com/rlittlefield/unraid-repository/refs/heads/main/ryansend.xml</TemplateURL>
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
