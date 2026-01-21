@@ -1,162 +1,46 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <Container version="2">
   <Name>ryansend</Name>
   <Repository>ryanlittlefield/ryansend</Repository>
-  <Category>Network:Web Tools:</Category>
-  <Beta>True</Beta>
-  <Date>2026-01-17</Date>
   <Registry>https://hub.docker.com/r/ryanlittlefield/ryansend</Registry>
   <Network>bridge</Network>
-  <MyIP />
+  <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support
-    >https://forums.unraid.net/topic/196593-support-kingemer-ryansend/</Support>
+  <Support>https://forums.unraid.net/topic/196593-support-kingemer-ryansend/</Support>
   <Project>https://github.com/rlittlefield/ryansend</Project>
-  <GitHub>https://github.com/rlittlefield/ryansend</GitHub>
-  <Readme>https://github.com/rlittlefield/ryansend#readme</Readme>
-  <Overview
-    >ryansend lets you share files on your computer via public download URLs with cryptographic tokens that automatically expire. Perfect for sharing large files directly from your home server without needing special software, accounts, or VPNs.&#xD;
-&#xD;
-Features:&#xD;
-• Share large files (tested with over 70GB)&#xD;
-• Generates secure URLs with automatic expiration (1 hour default)&#xD;
-• Optional admin web interface for browsing and sharing&#xD;
-• No database required - tokens contain encrypted file paths&#xD;
-• Extremely lightweight (~32MB Docker image, 8MB RAM idle)&#xD;
-• Works without JavaScript for fast page loads&#xD;
-• No external tracking or requests (except optional ko-fi link)&#xD;
-&#xD;
+  <ReadMe>https://github.com/rlittlefield/ryansend#readme</ReadMe>
+  <Overview>ryansend lets you share files on your computer via public download URLs with cryptographic tokens that automatically expire. Perfect for sharing large files directly from your home server without needing special software, accounts, or VPNs.&#13;
+&#13;
+Features:&#13;
+&#x2022; Share large files (tested with over 70GB)&#13;
+&#x2022; Generates secure URLs with automatic expiration (1 hour default)&#13;
+&#x2022; Optional admin web interface for browsing and sharing&#13;
+&#x2022; No database required - tokens contain encrypted file paths&#13;
+&#x2022; Extremely lightweight (~32MB Docker image, 8MB RAM idle)&#13;
+&#x2022; Works without JavaScript for fast page loads&#13;
+&#x2022; No external tracking or requests (except optional ko-fi link)&#13;
+&#13;
 The admin panel (if enabled) will be available at /admin/login with a randomly generated password shown in the container logs.</Overview>
+  <Category>Tools: Network:Web Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:3001]/</WebUI>
-  <TemplateURL
-    >https://raw.githubusercontent.com/rlittlefield/ryansend/main/unraid/ryansend.xml</TemplateURL>
-
-  <ExtraParams />
-  <PostArgs />
-  <CPUset />
-  <DonateText>Support ryansend development</DonateText>
-  <DonateLink>https://ko-fi.com/ryanlittlefield</DonateLink>
-  <Requires />
-  <Config
-        Name="Main Port"
-        Target="3000"
-        Default="3000"
-        Mode="tcp"
-        Description="Main ryansend port for file sharing URLs"
-        Type="Port"
-        Display="always"
-        Required="true"
-        Mask="false"
-    >3000</Config>
-  <Config
-        Name="Admin Panel Port"
-        Target="3001"
-        Default="3001"
-        Mode="tcp"
-        Description="Admin panel port (only needed if admin panel is enabled)"
-        Type="Port"
-        Display="always"
-        Required="false"
-        Mask="false"
-    >3001</Config>
-  <Config
-        Name="AppData"
-        Target="/data"
-        Default=""
-        Mode="rw"
-        Description="Container config directory where config.yaml is stored. Such as /mnt/user/appdata/ryansend"
-        Type="Path"
-        Display="always"
-        Required="true"
-        Mask="false"
-    />
-  <Config
-        Name="Shared Files"
-        Target="/shared"
-        Default=""
-        Mode="ro"
-        Description="Directory containing files you want to share (mounted read-only for security). Example: /mnt/user/ or /mnt/user/data/media"
-        Type="Path"
-        Display="always"
-        Required="true"
-        Mask="false"
-    />
-  <Config
-        Name="Base URL"
-        Target="RYANSEND_BASE_URL"
-        Default="http://tower.local:3000"
-        Mode=""
-        Description="Base URL for generated sharing links. Change 'tower.local' to your server's IP or domain name. Include the port if not using 80/443."
-        Type="Variable"
-        Display="always"
-        Required="true"
-        Mask="false"
-    >http://localhost:3000</Config>
-  <Config
-        Name="Enable Admin Panel"
-        Target="RYANSEND_DEFAULT_ADMIN_PANEL"
-        Default="true"
-        Mode=""
-        Description="Enable the web admin interface for browsing and sharing files"
-        Type="Variable"
-        Display="always"
-        Required="false"
-        Mask="false"
-    >true</Config>
-  <Config
-        Name="Admin Sharing Root"
-        Target="RYANSEND_ADMIN_SHARING_ROOT"
-        Default="/shared"
-        Mode=""
-        Description="Root directory that the admin panel can browse and share from"
-        Type="Variable"
-        Display="always"
-        Required="false"
-        Mask="false"
-    >/shared</Config>
-  <Config
-        Name="Remove Ko-fi Link"
-        Target="RYANSEND_REMOVE_KOFI"
-        Default="false"
-        Mode=""
-        Description="Set to 'true' to remove the ko-fi support link from the admin panel"
-        Type="Variable"
-        Display="advanced"
-        Required="false"
-        Mask="false"
-    >false</Config>
-  <Config
-        Name="Log Level"
-        Target="RUST_LOG"
-        Default="info"
-        Mode=""
-        Description="Logging level (error, warn, info, debug, trace)"
-        Type="Variable"
-        Display="advanced"
-        Required="false"
-        Mask="false"
-    >info</Config>
-  <Config
-        Name="PUID"
-        Target="PUID"
-        Default="99"
-        Mode=""
-        Description="User ID that the container will run as"
-        Type="Variable"
-        Display="advanced"
-        Required="false"
-        Mask="false"
-    >99</Config>
-  <Config
-        Name="PGID"
-        Target="PGID"
-        Default="100"
-        Mode=""
-        Description="Group ID that the container will run as"
-        Type="Variable"
-        Display="advanced"
-        Required="false"
-        Mask="false"
-    >100</Config>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1768973856</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Main Port (sharing files)" Target="3000" Default="" Mode="tcp" Description="Main ryansend port for file sharing URLs. If you change this from the default of 3000, you should change RYANSEND_PORT too." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Admin Panel Port" Target="3001" Default="3001" Mode="tcp" Description="ryansend runs the admin panel on a different port from the path that shares files." Type="Port" Display="always" Required="false" Mask="false">3001</Config>
+  <Config Name="AppData" Target="/data" Default="" Mode="rw" Description="Where ryansend will write its config. The config files are small so this location doesn't need much storage capacity. ryansend never copies the shared files to this location. Example: /mnt/user/ryansend" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Shared Files" Target="/shared" Default="" Mode="ro" Description="The path to the files you intend to make shareable. These files don't become public just because you mount them! Files only become downloadable once you manually click the " Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Log Level" Target="RUST_LOG" Default="" Mode="" Description="Logging level (error, warn, info, debug, trace)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">info</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID that the container will run as" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID that the container will run as" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Enable Admin Panel" Target="RYANSEND_DEFAULT_ADMIN_PANEL" Default="true" Mode="" Description="Enable the web admin interface for browsing and sharing files (recommended unless you want to only share files via command line)" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="Remove Ko-fi Link" Target="RYANSEND_REMOVE_KOFI" Default="false" Mode="" Description="ryansend includes a link to a donation ko-fi page on the admin page. It is never shown to the person downloading, just you when you are browsing the files to share. It isn't intrusive, but you can turn it off if you donate (or if you just want to)." Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
+  <TailscaleStateDir/>
 </Container>
