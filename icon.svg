@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Dapper duck with a monocle and umbrella">
+  <rect width="256" height="256" rx="48" fill="#3AA6E0"/>
+
+  <!-- Umbrella -->
+  <g>
+    <!-- shaft + handle -->
+    <path d="M186 50 L186 196 Q186 212 170 212 Q154 212 154 196" fill="none" stroke="#7A4B24" stroke-width="7" stroke-linecap="round"/>
+    <!-- top knob -->
+    <circle cx="186" cy="46" r="4" fill="#7A4B24"/>
+    <!-- canopy -->
+    <path d="M128 92 A58 52 0 0 1 244 92
+             Q230 110 216 92 Q201 110 186 92 Q171 110 156 92 Q142 110 128 92 Z" fill="#E23B4E"/>
+    <!-- ribs -->
+    <path d="M186 44 L128 92 M186 44 L156 92 M186 44 L216 92 M186 44 L244 92" fill="none" stroke="#B02A3B" stroke-width="2.5"/>
+  </g>
+
+  <!-- Body -->
+  <path d="M60 150c0-33 27-58 60-58 26 0 47 15 55 37 22 3 38 13 38 22 0 12-24 21-73 21-52 0-80-19-80-45z" fill="#FFD23F"/>
+  <!-- Wing -->
+  <path d="M96 138c18-6 40-6 58 2-6 16-24 26-42 22-10-2-18-13-16-24z" fill="#F4B400"/>
+  <!-- Head -->
+  <circle cx="80" cy="96" r="34" fill="#FFD23F"/>
+  <!-- Beak -->
+  <path d="M46 98c-16 0-26 6-26 12s10 12 26 12c8 0 14-4 14-12s-6-12-14-12z" fill="#FF7A00"/>
+  <!-- Eye -->
+  <circle cx="72" cy="88" r="6" fill="#2B2B2B"/>
+
+  <!-- Monocle -->
+  <circle cx="72" cy="88" r="12" fill="none" stroke="#C8A951" stroke-width="3"/>
+  <path d="M72 100 Q66 122 52 132" fill="none" stroke="#C8A951" stroke-width="2" stroke-linecap="round"/>
+</svg>
