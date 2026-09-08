@@ -1,13 +1,9 @@
 <CommunityApplications>
   <Profile>
-    Describe what users will find in this repository, which apps or plugins you maintain, and where they should go for support.
+    This is where you can find ryansend, an unraid app that lets you send a file securely with a link
   </Profile>
   <Icon>https://raw.githubusercontent.com/rlittlefield/unraid-repository/main/icon.svg</Icon>
   <WebPage>https://github.com/rlittlefield/unraid-repository</WebPage>
-  <!-- Optional support links -->
-  <!-- <Forum>https://forums.unraid.net/topic/YOUR_SUPPORT_TOPIC</Forum> -->
-  <!-- <Discord>https://discord.gg/YOUR_INVITE_CODE</Discord> -->
-  <!-- Optional profile extras -->
   <DonateLink>https://ko-fi.com/ryanlittlefield</DonateLink>
   <DonateText>Support this project</DonateText>
 </CommunityApplications>
